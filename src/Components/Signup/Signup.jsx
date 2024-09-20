@@ -28,7 +28,7 @@ export default function Signup() {
       toast.success("signup successfull");
     } else {
       setLoading(false);
-      toast.error("something went wrong");
+      toast.error("Already added user");
     }
     
   };
@@ -46,6 +46,7 @@ export default function Signup() {
           <br />
           <input
             className="input"
+            placeholder='Username'
             type="text"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
@@ -58,6 +59,7 @@ export default function Signup() {
           <br />
           <input
             className="input"
+            placeholder='Email'
             type="email"
             value={Email}
             onChange={(e) => setEmail(e.target.value)}
@@ -70,6 +72,7 @@ export default function Signup() {
           <br />
           <input
             className="input"
+            placeholder='Phonenumber'
             type="number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -82,6 +85,7 @@ export default function Signup() {
           <br />
           <input
             className="input"
+            placeholder='Password'
             type="password"
             id="lname"
             value={Password}

@@ -22,7 +22,7 @@ export const ProductProvider = ({ children }) => {
         let snapshot = await uploadBytes(storageRef, image);
         let url = await getDownloadURL(storageRef);
         imageUrls.push(url);
-        console.log(snapshot);
+        console.log("namukke ithe varunnath thettann",snapshot);
       }
 
       await addDoc(collection(db, "products"), {
@@ -53,7 +53,7 @@ export const ProductProvider = ({ children }) => {
       setProducts(allProducts);
 
     } catch (error) {
-      console.log(error);
+      console.log("error annne scene",error.message);
     }
   };
 
